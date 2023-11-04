@@ -8,10 +8,10 @@
 #include <time.h>
 #include <limits.h>
 #include <stdint.h>
-
+#include <stdbool.h>
 
 
 int battle(int player_gold);
 int hello(char *nickname, int size);
-int tavern(int player_gold);
+void tavern(int *player_gold);
 #endif

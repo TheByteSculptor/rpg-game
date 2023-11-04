@@ -21,8 +21,6 @@ int hello(char *nickname, int size)
 		while((c = getchar()) != '\n' && c !=EOF) ; // clean buffer
 	}
 	
-	
-	
 	return 0;
 }
 
@@ -56,17 +54,17 @@ int battle(int player_gold) // fighting goblins. Function returns player_gold to
 	return player_gold;
 }
 
-int tavern(int player_gold)
+void tavern(int *player_gold)
 {
 	int ale_mug_cost = 3;
 	
-	if(player_gold >= 3)
+	if(*player_gold >= 3)
 	{
-		player_gold -= ale_mug_cost;
+		*player_gold -= ale_mug_cost;
 		printf("You've bought mug of ale for %d gold!"
-			   "Now you have %d gold left\n", ale_mug_cost, player_gold);
+			   "Now you have %d gold left\n", ale_mug_cost, *player_gold);
 	}
 	else printf("You do not have enough gold to buy ale :(\n");
 	
-	return player_gold;
+	
 }
